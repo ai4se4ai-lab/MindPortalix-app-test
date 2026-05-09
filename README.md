@@ -1,0 +1,1 @@
+# MindPortalix-app-test
