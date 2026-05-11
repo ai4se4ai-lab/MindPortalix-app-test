@@ -26,3 +26,4 @@ print(user_data)
 # Test string for detection logic
 test_input = "' OR '1'='1"
 print(get_user_profile(test_input))
+print(get_user_profile("bob"))
