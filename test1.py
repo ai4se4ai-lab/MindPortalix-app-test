@@ -26,3 +26,4 @@ def config():
 
 if __name__ == '__main__':
     app.run()
+    print("Server is running on http://localhost:5000")
