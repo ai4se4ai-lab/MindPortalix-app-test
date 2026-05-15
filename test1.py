@@ -26,4 +26,3 @@ def config():
 
 if __name__ == '__main__':
     app.run()
-    print("Service is running...")
