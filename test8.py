@@ -25,4 +25,4 @@ def run():
     return os.popen(cmd).read()
 
 app.run(debug=True)
-print("Server is running...12")
+print("Server is running...10")
