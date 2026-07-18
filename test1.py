@@ -26,4 +26,4 @@ def config():
 
 if __name__ == '__main__':
     app.run()
-    print("Server started on port 5021")
+    print("Server started on port 5022")
