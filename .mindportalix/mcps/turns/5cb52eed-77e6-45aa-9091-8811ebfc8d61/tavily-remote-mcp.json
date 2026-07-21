@@ -1,0 +1,7 @@
+{
+  "name": "tavily-remote-mcp",
+  "config": {
+    "command": "npx -y mcp-remote https://mcp.tavily.com/mcp/?tavilyApiKey=***REDACTED***",
+    "env": {}
+  }
+}

@@ -1,0 +1,17 @@
+---
+agents:
+  my_planner:
+    prompt: "You are a planner. Do not produce suggestions or concrete responses. Provide a concise, step-by-step plan of no more than 100 words to achieve the goal in the user input. "
+  my_reviewer:
+    model: gpt-oss:20b
+    prompt: "You are a reviewer. Review the provided plan and just answer this question how well this plan will address the initial user input, then give a grade from 0 to 10. If the grade is less than or equal to 5, it is unacceptable and respond with `fail`. Above 5 is acceptable and respond with `success`."
+  my_executor:
+    prompt: "You are the final response writer. You may use available tools to execute the plan provided by my_planner agent. Write the output the user will read: direct, complete, and helpful. If user asked for a code, present the final code cleanly. Do not summarize the review, only produce the final answer."
+    tools: [query_codebase_context,tavily-remote-mcp]
+---
+flowchart TD
+  userInput --> my_planner
+  my_planner --> my_reviewer
+  my_reviewer -->|fail| my_planner
+  my_reviewer --> my_executor
+  my_executor --> response
